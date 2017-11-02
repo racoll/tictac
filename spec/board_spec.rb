@@ -1,18 +1,18 @@
-require "grid"
+require "board"
 
-RSpec.describe Grid do
+RSpec.describe Board do
 
   describe "the grid" do
 
-    it "initializes with a grid of 3x3" do
-      grid = Grid.new
+    it "initializes with a board of 3x3" do
+      grid = Board.new
       expect(grid.default_grid).to eq([["[ ]", "[ ]", "[ ]"],
                                        ["[ ]", "[ ]", "[ ]"],
                                        ["[ ]", "[ ]", "[ ]"]])
     end
 
-    it "displays a grid of 3x3 to the players" do
-      grid = Grid.new
+    it "displays a board of 3x3 to the players" do
+      grid = Board.new
       expect(grid.display_grid).to eq([["[ ]", "[ ]", "[ ]"],
                                        ["[ ]", "[ ]", "[ ]"],
                                        ["[ ]", "[ ]", "[ ]"]])

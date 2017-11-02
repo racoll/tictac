@@ -1,4 +1,4 @@
-class Grid
+class Board
 
 
   attr_reader :grid

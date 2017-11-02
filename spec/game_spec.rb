@@ -16,7 +16,19 @@ RSpec.describe Game do
       it "starts with player_1" do
         expect(game.current_turn).to eq(player_1)
       end
+
+      it "switches turns" do
+      game.current_turn
+      expect(game.next_turn).to eq(player_2)
+      end
     end
 
+    describe "placing a marker" do
+      it "allows player_1 to place a marker on the grid" do
+        expect(game.place_marker(0, 0, "[x]")).to eq([["[x]", "[ ]", "[ ]"],
+                                                    ["[ ]", "[ ]", "[ ]"],
+                                                    ["[ ]", "[ ]", "[ ]"]])
+      end
+    end
 
 end
