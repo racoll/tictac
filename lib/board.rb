@@ -1,6 +1,5 @@
 class Board
 
-
   attr_reader :grid
 
   def initialize(grid = default_grid)
@@ -8,7 +7,7 @@ class Board
   end
 
   def default_grid
-    @grid = Array.new(3) {Array.new(3) { "[ ]"} }
+    @grid = Array.new(3) {Array.new(3) {"[ ]"} }
   end
 
   def display_grid

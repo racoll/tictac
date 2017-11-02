@@ -18,8 +18,7 @@ RSpec.describe Game do
       end
 
       it "switches turns" do
-      game.current_turn
-      expect(game.next_turn).to eq(player_2)
+      expect(game.turn).to eq(player_2)
       end
     end
 
