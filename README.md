@@ -29,3 +29,7 @@ opponent would take alternating go's.
 
 6) As a keen tic tac toe-ist, so that I know if I have won,
 I want to be notified of victory, draw or loss.
+
+Game class
+Grid class
+Player class

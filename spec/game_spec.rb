@@ -2,18 +2,15 @@ require "game"
 
 RSpec.describe Game do
 
-  it "initializes with a grid of 3x3" do
-    game = Game.new
-    expect(game.default_grid).to eq([["[ ]", "[ ]", "[ ]"],
-                                     ["[ ]", "[ ]", "[ ]"],
-                                     ["[ ]", "[ ]", "[ ]"]])
-  end
+  subject(:game) { described_class.new(player_1, player_2) }
+  let(:player_1) { double :player }
+  let(:player_2) { double :player }
 
-  it "displays a grid of 3x3 to the players" do
-    game = Game.new
-    expect(game.display_grid).to eq([["[ ]", "[ ]", "[ ]"],
-                                     ["[ ]", "[ ]", "[ ]"],
-                                     ["[ ]", "[ ]", "[ ]"]])
-  end
+    it "should initialize with 2 players" do
+      # game = Game.new(player_1, player_2)
+      expect(game.player_1).to eq(player_1)
+      expect(game.player_2).to eq(player_2)
+    end
+
 
 end

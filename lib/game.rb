@@ -1,20 +1,17 @@
 class Game
 
+  attr_reader :player_1, :player_2
 
-  attr_reader :grid
-
-  def initialize(grid = default_grid)
-    @grid = grid
+  def initialize(player_1, player_2)
+    @players = [player_1, player_2]
   end
 
-  def default_grid
-    @grid = Array.new(3) {Array.new(3) { "[ ]"} }
+  def player_1
+    @players.first
   end
 
-  def display_grid
-    @grid.each do |cell| # for each component of the grid, take each component....
-      puts cell.each { |p| p }.join(" ") # for each component (each array) put on a new paragraph through 'puts'
-    end
+  def player_2
+    @players.last
   end
 
 end
