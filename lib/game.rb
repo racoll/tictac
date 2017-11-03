@@ -6,11 +6,11 @@ class Game
   attr_reader :player_1, :player_2, :board
   attr_accessor :current_turn
 
-  def initialize(player_1, player_2)
-    # @board = board
+  def initialize(player_1, player_2, board = Board.new)
+    @board = board
     @player_1 = Player.new(player_1)
     @player_2 = Player.new(player_2)
-    # @grid = @board.grid # accessing the grid array, inside the board object.
+    @grid = @board.grid # accessing the grid array, inside the board object.
     @players = [player_1, player_2]
     @current_turn = player_1
   end
@@ -31,6 +31,10 @@ class Game
     self.current_turn == player_1 ? @current_turn = player_2 : @current_turn = player_1
   end
 
+  def place_marker(x, y, val)
+    @board.grid[x][y]= val
+    @board.display_grid
+  end
 
   # if player successfully places a marker on the grid,
   # then +1 to the go counter variable!

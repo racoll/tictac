@@ -22,12 +22,12 @@ RSpec.describe Game do
       end
     end
 
-    # describe "placing a marker" do
-    #   it "allows player_1 to place a marker on the grid" do
-    #     expect(game.place_marker(0, 0, "[x]")).to eq([["[x]", "[ ]", "[ ]"],
-    #                                                 ["[ ]", "[ ]", "[ ]"],
-    #                                                 ["[ ]", "[ ]", "[ ]"]])
-    #   end
-    # end
+    describe "placing a marker" do
+      it "allows player_1 to place a marker on the grid" do
+        expect(game.place_marker(0, 0, "[x]")).to eq([["[x]", "[ ]", "[ ]"],
+                                                    ["[ ]", "[ ]", "[ ]"],
+                                                    ["[ ]", "[ ]", "[ ]"]])
+      end
+    end
 
 end
