@@ -10,6 +10,12 @@ RSpec.describe Player do
     end
   end
 
+  describe "#assign_marker" do
+    it "assigns Rob the marker x" do
+      expect(player.assign_marker).to eq "x"
+    end
+  end
+
 end
 
 
