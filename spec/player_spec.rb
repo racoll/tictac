@@ -10,5 +10,13 @@ RSpec.describe Player do
     end
   end
 
+  describe "placing a marker" do
+    it "allows Rob to place a marker on the grid" do
+      expect(player.place_marker(0, 0, "[x]")).to eq([["[x]", "[ ]", "[ ]"],
+                                                  ["[ ]", "[ ]", "[ ]"],
+                                                  ["[ ]", "[ ]", "[ ]"]])
+    end
+  end
+
 
 end
